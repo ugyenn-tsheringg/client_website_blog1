@@ -1,5 +1,6 @@
 import { Header } from "@/components/header"
 import { Footer } from "@/components/footer"
+import { Facebook, MessageCircle, Instagram, Twitter, Phone } from "lucide-react"
 
 export default function ContactPage() {
   return (
@@ -14,14 +15,20 @@ export default function ContactPage() {
               <p>Share your thoughts, stories, and feedback</p>
               <p>I'd love to hear from you and connect</p>
               <div className="flex gap-4 mt-6">
-                <div className="w-10 h-10 bg-black/20 rounded-full flex items-center justify-center hover:scale-110 transition-transform duration-300">
-                  <span className="text-xl">📧</span>
+                <div className="w-10 h-10 bg-black/20 rounded-full flex items-center justify-center hover:scale-110 transition-transform duration-300 cursor-pointer">
+                  <Facebook size={20} />
                 </div>
-                <div className="w-10 h-10 bg-black/20 rounded-full flex items-center justify-center hover:scale-110 transition-transform duration-300">
-                  <span className="text-xl">📱</span>
+                <div className="w-10 h-10 bg-black/20 rounded-full flex items-center justify-center hover:scale-110 transition-transform duration-300 cursor-pointer">
+                  <MessageCircle size={20} />
                 </div>
-                <div className="w-10 h-10 bg-black/20 rounded-full flex items-center justify-center hover:scale-110 transition-transform duration-300">
-                  <span className="text-xl">💬</span>
+                <div className="w-10 h-10 bg-black/20 rounded-full flex items-center justify-center hover:scale-110 transition-transform duration-300 cursor-pointer">
+                  <Instagram size={20} />
+                </div>
+                <div className="w-10 h-10 bg-black/20 rounded-full flex items-center justify-center hover:scale-110 transition-transform duration-300 cursor-pointer">
+                  <Twitter size={20} />
+                </div>
+                <div className="w-10 h-10 bg-black/20 rounded-full flex items-center justify-center hover:scale-110 transition-transform duration-300 cursor-pointer">
+                  <Phone size={20} />
                 </div>
               </div>
             </div>
@@ -100,25 +107,37 @@ export default function ContactPage() {
                 </div>
 
                 <div className="text-center animate-fade-in" style={{ animationDelay: "0.8s" }}>
-                  <p className="text-sm text-gray-400 mb-2">Or connect with me on social media:</p>
+                  <p className="text-sm text-gray-400 mb-4">Or connect with me on social media:</p>
                   <div className="flex justify-center gap-4">
                     <a
                       href="#"
-                      className="text-pink-400 hover:text-pink-300 hover:scale-110 transition-all duration-200"
+                      className="w-10 h-10 bg-gray-800 rounded-full flex items-center justify-center text-pink-400 hover:text-pink-300 hover:bg-gray-700 hover:scale-110 transition-all duration-200"
                     >
-                      Instagram
+                      <Instagram size={18} />
                     </a>
                     <a
                       href="#"
-                      className="text-blue-400 hover:text-blue-300 hover:scale-110 transition-all duration-200"
+                      className="w-10 h-10 bg-gray-800 rounded-full flex items-center justify-center text-blue-400 hover:text-blue-300 hover:bg-gray-700 hover:scale-110 transition-all duration-200"
                     >
-                      Twitter
+                      <Twitter size={18} />
                     </a>
                     <a
                       href="#"
-                      className="text-gray-400 hover:text-gray-300 hover:scale-110 transition-all duration-200"
+                      className="w-10 h-10 bg-gray-800 rounded-full flex items-center justify-center text-blue-600 hover:text-blue-500 hover:bg-gray-700 hover:scale-110 transition-all duration-200"
                     >
-                      LinkedIn
+                      <Facebook size={18} />
+                    </a>
+                    <a
+                      href="#"
+                      className="w-10 h-10 bg-gray-800 rounded-full flex items-center justify-center text-green-400 hover:text-green-300 hover:bg-gray-700 hover:scale-110 transition-all duration-200"
+                    >
+                      <MessageCircle size={18} />
+                    </a>
+                    <a
+                      href="#"
+                      className="w-10 h-10 bg-gray-800 rounded-full flex items-center justify-center text-green-500 hover:text-green-400 hover:bg-gray-700 hover:scale-110 transition-all duration-200"
+                    >
+                      <Phone size={18} />
                     </a>
                   </div>
                 </div>
