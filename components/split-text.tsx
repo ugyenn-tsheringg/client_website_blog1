@@ -37,7 +37,7 @@ const SplitText = ({
   tag = 'p',
   onLetterAnimationComplete
 }: SplitTextProps) => {
-  const ref = useRef(null);
+  const ref = useRef<HTMLElement & { _rbsplitInstance?: any }>(null);
   const animationCompletedRef = useRef(false);
   const [fontsLoaded, setFontsLoaded] = useState(false);
 
@@ -54,7 +54,7 @@ const SplitText = ({
   useGSAP(
     () => {
       if (!ref.current || !text || !fontsLoaded) return;
-      const el = ref.current;
+      const el = ref.current as HTMLElement & { _rbsplitInstance?: any };
 
       if (el._rbsplitInstance) {
         try {
