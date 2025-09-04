@@ -6,6 +6,22 @@ import { useGSAP } from '@gsap/react';
 
 gsap.registerPlugin(ScrollTrigger, GSAPSplitText, useGSAP);
 
+interface SplitTextProps {
+  text: string
+  className?: string
+  delay?: number
+  duration?: number
+  ease?: string
+  splitType?: string
+  from?: { opacity: number; y: number }
+  to?: { opacity: number; y: number }
+  threshold?: number
+  rootMargin?: string
+  textAlign?: string
+  tag?: string
+  onLetterAnimationComplete?: () => void
+}
+
 const SplitText = ({
   text,
   className = '',
@@ -20,7 +36,7 @@ const SplitText = ({
   textAlign = 'center',
   tag = 'p',
   onLetterAnimationComplete
-}) => {
+}: SplitTextProps) => {
   const ref = useRef(null);
   const animationCompletedRef = useRef(false);
   const [fontsLoaded, setFontsLoaded] = useState(false);
